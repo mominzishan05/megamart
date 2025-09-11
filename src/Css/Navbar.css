@@ -1,0 +1,154 @@
+/* Main Navbar */
+.navbar {
+  height: 70px;
+  background: linear-gradient(90deg, #ff4e88, #ff7eb3);
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* Sticky top */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* content ke upar dikhe */
+}
+
+
+/* Logo (Left) */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  transition: 0.3s;
+  padding: 5px 8px;
+}
+
+/* Underline Hover */
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Login button style */
+.navbar-login a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  background: #ff4e88;
+  color: #ff4e88;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+.navbar-login a:hover {
+  background: #ffe0eb;
+  color: #d81b60;
+}
+
+/* Hamburger (Mobile only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+
+
+.logout-btn {
+  background-color: #e63946;   /* red shade */
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d62828;  /* darker red on hover */
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* when menu active */
+  .navbar.active .navbar-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0d0d0d, #060003);
+    padding: 20px 0;
+    gap: 20px;
+    align-items: center;
+    animation: dropdown 0.3s ease;
+  }
+}
+
+/* smooth dropdown animation */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
