@@ -17,6 +17,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+
+          <Route path="/" element={<Navigate to="/login" replace />} />
           {/* Protected */}
           <Route path="/" element={<ProtectRoute><HomePage /></ProtectRoute>} />
           <Route path="/cart" element={<ProtectRoute><CartPage /></ProtectRoute>} />
