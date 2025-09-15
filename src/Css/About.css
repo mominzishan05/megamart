@@ -1,7 +1,9 @@
 .about-page {
   padding: 60px 20px;
-  background: #fdf2f8;
+  background: linear-gradient(90deg, #0f9b0f, #000000); /* Green to Black */
   font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 80vh;
 }
 
 .about-container {
@@ -16,8 +18,14 @@
 
 .about-image img {
   width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border: 4px solid #ffde59; /* yellow border for highlight */
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
 }
 
 .about-content {
@@ -25,18 +33,21 @@
 }
 
 .about-content h1 {
-  font-size: 32px;
-  color: #ff4e88;
+  font-size: 36px;
+  color: #ffde59; /* yellow heading */
   margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .about-content p {
   font-size: 16px;
-  line-height: 1.7;
-  color: #333;
+  line-height: 1.8;
+  color: #ddd;
   margin-bottom: 15px;
 }
 
+/* Stats Section */
 .about-stats {
   display: flex;
   gap: 30px;
@@ -44,38 +55,63 @@
   flex-wrap: wrap;
 }
 
+.stat {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  min-width: 120px;
+  transition: transform 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+
 .stat h2 {
-  font-size: 28px;
-  color: #ff4e88;
+  font-size: 30px;
+  color: #ffde59;
   margin: 0;
 }
 
 .stat p {
   font-size: 14px;
-  color: #555;
+  color: #ccc;
   margin: 5px 0 0 0;
 }
 
+/* Additional Info */
 .about-additional {
   margin-top: 40px;
 }
 
 .about-additional h2 {
   font-size: 24px;
-  color: #ff4e88;
+  color: #ffde59;
   margin-bottom: 15px;
 }
 
 .about-additional ul {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 15px;
 }
 
 .about-additional li {
   font-size: 16px;
-  color: #333;
-  margin-bottom: 8px;
+  color: #ddd;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.about-additional li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ffde59;
+  font-weight: bold;
 }
 
 /* Responsive */
@@ -95,14 +131,7 @@
     justify-content: center;
   }
 
-  .about-additional ul {
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .about-additional li::before {
-    content: "• ";
-    color: #ff4e88;
-    font-weight: bold;
+  .about-additional li {
+    text-align: left;
   }
 }

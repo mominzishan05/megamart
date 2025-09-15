@@ -1,7 +1,9 @@
 .contact-page {
   padding: 60px 20px;
-  background: #fdf2f8;
+  background: linear-gradient(90deg, #0f9b0f, #000000); /* dark green → black */
   font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 80vh;
 }
 
 .contact-container {
@@ -14,20 +16,22 @@
   align-items: flex-start;
 }
 
+/* Contact Info */
 .contact-info {
   flex: 1;
   min-width: 300px;
 }
 
 .contact-info h1 {
-  font-size: 32px;
-  color: #ff4e88;
+  font-size: 34px;
+  color: #ffde59;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .contact-info p {
   font-size: 16px;
-  color: #333;
+  color: #ddd;
   line-height: 1.7;
   margin-bottom: 25px;
 }
@@ -39,24 +43,26 @@
 }
 
 .info-item h3 {
-  color: #ff4e88;
+  color: #ffde59;
   margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .info-item p {
-  color: #555;
+  color: #ccc;
   margin: 0;
 }
 
-/* Form */
+/* Contact Form */
 .contact-form {
   flex: 1;
   min-width: 300px;
 }
 
 .contact-form h2 {
-  color: #ff4e88;
+  color: #ffde59;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .contact-form form {
@@ -68,26 +74,37 @@
 .contact-form input,
 .contact-form textarea {
   padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   resize: none;
-}
-
-.contact-form button {
-  background: #ff4e88;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
   transition: 0.3s;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ffde59;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+}
+
+.contact-form button {
+  background: #ffde59;
+  color: #000;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .contact-form button:hover {
-  background: #ff7eb3;
+  background: #ffc107;
+  transform: scale(1.05);
 }
 
 /* Responsive */
@@ -98,7 +115,8 @@
     text-align: center;
   }
 
-  .contact-info, .contact-form {
+  .contact-info, 
+  .contact-form {
     width: 100%;
   }
 }

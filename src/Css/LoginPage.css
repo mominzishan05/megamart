@@ -4,32 +4,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background: linear-gradient(135deg, #0f9b0f, #000000); /* dark green → black */
   font-family: "Poppins", sans-serif;
 }
 
 /* Card box */
 .login-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
   padding: 40px 35px;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
   text-align: center;
   width: 350px;
+  backdrop-filter: blur(10px);
 }
 
 /* Title */
 .login-title {
   margin-bottom: 5px;
   font-size: 26px;
-  color: #333;
-  font-weight: 600;
+  color: #ffde59; /* yellow highlight */
+  font-weight: 700;
 }
 
 /* Subtitle */
 .login-subtitle {
   margin-bottom: 25px;
-  color: #777;
+  color: #ddd;
   font-size: 14px;
 }
 
@@ -38,46 +39,54 @@
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #444;
   outline: none;
   font-size: 14px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
   transition: 0.3s ease;
 }
 
+.login-form input::placeholder {
+  color: #ccc;
+}
+
 .login-form input:focus {
-  border-color: #ff7eb3;
-  box-shadow: 0 0 6px rgba(255, 126, 179, 0.5);
+  border-color: #ffde59;
+  box-shadow: 0 0 8px rgba(255, 222, 89, 0.6);
+  background: rgba(255,255,255,0.15);
 }
 
 /* Button */
 .login-btn {
   width: 100%;
   padding: 12px;
-  background: #ff7eb3;
+  background: #ffde59;
   border: none;
-  border-radius: 8px;
-  color: white;
+  border-radius: 12px;
+  color: #000;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .login-btn:hover {
-  background: #ff4e88;
+  background: #ffc107;
+  transform: scale(1.05);
 }
 
 /* Footer */
 .login-footer {
   margin-top: 20px;
   font-size: 13px;
-  color: #555;
+  color: #ccc;
 }
 
 .login-footer a {
-  color: #ff4e88;
+  color: #ffde59;
   text-decoration: none;
   font-weight: 500;
 }
