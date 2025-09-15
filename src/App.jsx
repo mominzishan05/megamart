@@ -13,7 +13,7 @@ import ProtectRoute from "./Routers/ProtectRoute";
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename="/megamart">
+      <BrowserRouter basename="/megamart/">
         <Navbar />
         <Routes>
           {/* Default route -> LoginPage */}

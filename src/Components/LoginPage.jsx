@@ -14,7 +14,7 @@ const LoginPage = () => {
     // Dummy check
     if (email === "emilys" && password === "emilyspass") {
       // Cookie set (10 min expiry)
-      Cookies.set("authToken", "fake-jwt-token", { expires: 5 / 1440 }); 
+      Cookies.set("authToken", "fake-jwt-token", { expires: 2 / 1440 }); 
       navigate("/");
     } else {
       alert("Login failed! Check username/password");
